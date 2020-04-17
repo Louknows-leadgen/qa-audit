@@ -3,7 +3,7 @@
 
 @section('content')
 
-<h1>Hi Supervisor</h1>
+<h3>Hi Supervisor</h3>
 
 @endsection
 

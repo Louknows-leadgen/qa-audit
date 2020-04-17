@@ -33,6 +33,11 @@ Route::get('/auditor', function(){
 })->name('auditor')->middleware('checkrole:4');
 
 
+Route::put('/user/update_email','UserController@update_email')
+       ->name('user.update_email');
+Route::get('/user','UserController@index')->name('user.index');
+
+
 Auth::routes();
 
 // Route::get('/home', 'HomeController@index')->name('home');
