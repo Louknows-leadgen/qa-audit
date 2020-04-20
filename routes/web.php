@@ -33,8 +33,10 @@ Route::get('/auditor', function(){
 })->name('auditor')->middleware('checkrole:4');
 
 
-Route::put('/user/update_email','UserController@update_email')
-       ->name('user.update_email');
+Route::put('/user/update_account','UserController@update_account')
+       ->name('user.update_account');
+Route::put('/user/update_password','UserController@update_password')
+       ->name('user.update_password');
 Route::get('/user','UserController@index')->name('user.index');
 
 

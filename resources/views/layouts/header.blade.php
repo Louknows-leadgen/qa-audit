@@ -18,6 +18,10 @@
 							Home page
 						</a>
 
+						<a class="dropdown-item menu-item" href="{{ route('user.index') }}">
+							My account
+						</a>
+
 						@can('register')
 						<a class="dropdown-item menu-item" href="{{ route('register') }}">
 							Create user

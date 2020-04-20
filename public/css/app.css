@@ -11526,3 +11526,7 @@ span.close {
   cursor: pointer;
 }
 
+.acnt-tab.link.single-item {
+  background-color: #e6e6e6 !important;
+}
+
