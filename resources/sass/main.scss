@@ -639,3 +639,72 @@ span.close{
 .acnt-tab.link.single-item{
   background-color: #e6e6e6 !important;
 }
+
+.f1-grid{
+  border-left: 1px solid #ccc;
+  border-top: 1px solid #ccc;
+  display: grid;
+  grid-template-columns: 1fr 3fr repeat(7,1fr) 2fr;
+  grid-template-rows: repeat(3,1fr);
+  grid-template-areas:
+    "empty h-cust h-agnt h-agnt h-agnt h-agnt h-info h-info h-info h-comment"
+    "empty h-tone h-ack h-acc h-acc h-acc h-info h-info h-info h-comment"
+    "empty h-stmnt h-ack h-resp h-spd h-corr h-custdet h-inp h-end h-comment"
+}
+
+.f1-grid > div{
+  border-right: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+}
+
+.f1-grid > div:not(.empty){
+  display: grid;
+  place-items: center;
+  padding: 5px;
+}
+
+.row-1-col-1{
+  grid-area: empty;
+}
+.row-1-col-2{
+  grid-area: h-cust;
+}
+.row-1-col-3{
+  grid-area: h-agnt;
+}
+.row-1-col-4{
+  grid-area: h-info;
+}
+.row-1-col-5{
+  grid-area: h-comment;
+}
+.row-2-col-1{
+  grid-area: h-tone;
+}
+.row-2-col-2{
+  grid-area: h-ack;
+}
+.row-2-col-3{
+  grid-area: h-acc;
+}
+.row-3-col-1{
+  grid-area: h-stmnt;
+}
+.row-3-col-2{
+  grid-area: h-resp;
+}
+.row-3-col-3{
+  grid-area: h-spd;
+}
+.row-3-col-4{
+  grid-area: h-corr;
+}
+.row-3-col-5{
+  grid-area: h-custdet;
+}
+.row-3-col-6{
+  grid-area: h-inp;
+}
+.row-3-col-7{
+  grid-area: h-end;
+}
