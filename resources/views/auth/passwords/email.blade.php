@@ -10,7 +10,7 @@
                         {{ __('Reset Password') }}
                     </div>
                     <div class="d-flex justify-content-end w-100"> 
-                        <a href="{{ URL::previous() }}">Back</a> 
+                        <a href="{{ route('login') }}">Back</a> 
                     </div>
                 </div>
 

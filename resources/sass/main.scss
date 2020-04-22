@@ -708,3 +708,22 @@ span.close{
 .row-3-col-7{
   grid-area: h-end;
 }
+
+.left-chevron,
+.right-chevron{
+  position: relative;
+}
+
+.left-chevron::before{
+  content: '\f100';
+  font-family: FontAwesome;
+  position: absolute;
+  left: -15px;
+}
+
+.right-chevron::before{
+  content: '\f101';
+  font-family: FontAwesome;
+  position: absolute;
+  right: -15px;
+}

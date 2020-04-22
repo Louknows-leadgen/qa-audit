@@ -3,23 +3,108 @@
 
 @section('content')
 
-<div style="width: 1600px">
-	<div class="f1-grid">
-		<div class="row-1-col-1"></div>
-		<div class="row-1-col-2">Customer</div>
-		<div class="row-1-col-3">Agent</div>
-		<div class="row-1-col-4">information</div>
-		<div class="row-1-col-5">Comment</div>
-		<div class="row-2-col-1">Tone</div>
-		<div class="row-2-col-2">Acknowledgemment</div>	
-		<div class="row-2-col-3">Accuracy</div>
-		<div class="row-3-col-1">Statement (question/objection)</div>
-		<div class="row-3-col-2">Agent response</div>
-		<div class="row-3-col-3">Speed</div>
-		<div class="row-3-col-4">Correct response</div>
-		<div class="row-3-col-5">Customer details</div>
-		<div class="row-3-col-6">Agent input</div>
-		<div class="row-3-col-7">Call ends</div>
+<div class="container">
+	<div class="row">
+		<div class="col-md-3">
+			<div class="box">
+				<h5 class=" text-center">Response scripts:</h5>
+				<ul class="list-group">
+					<li class="list-group-item text-center">z01</li>
+					<li class="list-group-item text-center">z02</li>
+					<li class="list-group-item text-center">z03</li>
+					<li class="list-group-item text-center">z04</li>
+					<li class="list-group-item text-center">z05</li>
+					<li class="list-group-item text-center">z06</li>
+					<li class="list-group-item text-center">z07</li>
+					<li class="list-group-item text-center">z08</li>
+					<li class="list-group-item text-center">z09</li>
+					<li class="list-group-item text-center">z10</li>
+					<li class="list-group-item text-center">z11</li>
+					<li class="list-group-item text-center">z12</li>
+				</ul>
+			</div>
+		</div>
+		<div class="col-md-8">
+			<div class="box">
+				<div>
+					<h5>Script code: <strong>z01</strong></h5>
+					<hr>
+					<ol>
+						<li>
+							<div class="form-group">
+								<label>Customer's Statement (question/objection)</label>
+								<textarea class="form-control"></textarea>
+							</div>
+						</li>
+						<li>
+							<div class="form-group">
+								<label>Acknowledge</label>
+								<div class="d-flex justify-content-around w-25">
+									<div class="custom-control custom-radio">
+										<input type="radio" class="custom-control-input" name="acknowledge" id="z01-ack-yes" value="Yes">
+										<label class="custom-control-label" for="z01-ack-yes">Yes</label>
+									</div>
+									<div class="custom-control custom-radio">
+										<input type="radio" class="custom-control-input" name="acknowledge" id="z01-ack-no" value="No">
+										<label class="custom-control-label" for="z01-ack-no">No</label>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="form-group">
+								<label>Agent's response</label>
+								<input type="text" class="form-control" name="agent_response">
+							</div>
+						</li>
+						<li>
+							<div class="form-group">
+								<label>Agent's response speed</label>
+								<input type="number" class="form-control" name="agent_response_speed">
+							</div>
+						</li>
+						<li>
+							<div class="form-group">
+								<label>Correct response</label>
+								<input type="text" class="form-control" name="correct_response" placeholder="Correct key if agent was incorrect. Blank otherwise.">
+							</div>
+						</li>
+						<li>
+							<div class="form-group">
+								<label>Customer details</label>
+								<textarea class="form-control" name="customer_details" placeholder="Customer's details if agent is incorrect. Blank otherwise."></textarea>
+							</div>
+						</li>
+						<li>
+							<div class="form-group">
+								<label>Agent input</label>
+								<textarea class="form-control" name="agent_input" placeholder="Agent's input if agent is incorrect. Blank otherwise."></textarea>
+							</div>
+						</li>
+						<li>
+							<div class="form-group">
+								<label>Comment</label>
+								<textarea class="form-control" name="comment"></textarea>
+							</div>
+						</li>
+						<li>
+							<div class="form-group">
+								<label>Call ends</label>
+								<small class="text-danger">
+									Note: Once clicked, this will submit the form, and you will not be able to fill up the rest of the responses.
+								</small>
+								<button class="btn btn-primary d-block">Call ends</button>
+							</div>
+						</li>
+					</ol>
+					<div class="d-flex justify-content-end">
+						<span class="left-chevron">z02 </span>
+						<span class="mx-2">|</span>
+						<span class="right-chevron"> z02</span>
+					</div>
+				</div>
+			</div>
+		</div>
 	</div>
 </div>
 

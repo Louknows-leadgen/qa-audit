@@ -11610,3 +11610,22 @@ span.close {
   grid-area: h-end;
 }
 
+.left-chevron,
+.right-chevron {
+  position: relative;
+}
+
+.left-chevron::before {
+  content: "\F100";
+  font-family: FontAwesome;
+  position: absolute;
+  left: -15px;
+}
+
+.right-chevron::before {
+  content: "\F101";
+  font-family: FontAwesome;
+  position: absolute;
+  right: -15px;
+}
+
