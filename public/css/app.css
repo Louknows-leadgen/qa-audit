@@ -11657,3 +11657,9 @@ div[data-tabcontent].actv {
   background-color: #e8fceb;
 }
 
+.impt::after {
+  content: "  *";
+  display: inline;
+  color: red;
+}
+

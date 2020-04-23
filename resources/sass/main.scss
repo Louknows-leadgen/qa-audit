@@ -755,3 +755,9 @@ div[data-tabcontent].actv{
 .script-tab:not(.script-tab-actv):hover{
   background-color: #e8fceb;
 }
+
+.impt::after{
+  content: "  *";
+  display: inline;
+  color: red;
+}
