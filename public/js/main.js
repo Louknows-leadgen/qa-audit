@@ -1,9 +1,9 @@
 $(document).ready(function(){
 
 	/*
-	|---------------------------
+	|-----------------------------------------------------------------
 	| User details update
-	|---------------------------
+	|-----------------------------------------------------------------
 	*/
 
 	$("form.account-form").on("submit",function(e){
@@ -136,6 +136,29 @@ $(document).ready(function(){
     		},2000);
 		  });
 	}
+
+	//-----------------------------------------------------------------------------
+
+	$(document).on("click",".script-tab:not(.script-tab-actv)",function(){
+		var tab = $(this).data('tab');
+
+		// transfer tab active class
+		$(".script-tab-actv").removeClass("script-tab-actv");
+		$(this).addClass("script-tab-actv");
+
+		// transfer tabcontent active class
+		$("div[data-tabcontent].actv").removeClass("actv");
+		$("div[data-tabcontent="+ tab +"]").addClass("actv");
+
+		// smooth scrolling to the top
+		$("html,body").animate({ scrollTop: 0 },"slow");
+	});
+
+	$(document).on("click",".left-chevron,.right-chevron",function(){
+		var tab = $(this).data('tab');
+
+		$(".script-tab[data-tab="+ tab +"]").click();
+	});
 
 });
 

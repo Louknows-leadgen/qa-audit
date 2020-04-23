@@ -29,7 +29,7 @@ Route::get('/supervisor', function(){
 })->name('supervisor')->middleware('checkrole:3');
 
 Route::get('/auditor', function(){
-	return view('auditor');
+	return view('auditor.index');
 })->name('auditor')->middleware('checkrole:4');
 
 

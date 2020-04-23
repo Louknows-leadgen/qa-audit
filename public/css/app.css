@@ -11615,6 +11615,12 @@ span.close {
   position: relative;
 }
 
+.left-chevron:hover,
+.right-chevron:hover {
+  color: #0099ff;
+  cursor: pointer;
+}
+
 .left-chevron::before {
   content: "\F100";
   font-family: FontAwesome;
@@ -11627,5 +11633,27 @@ span.close {
   font-family: FontAwesome;
   position: absolute;
   right: -15px;
+}
+
+div[data-tabcontent] {
+  display: none;
+}
+
+div[data-tabcontent].actv {
+  display: block;
+}
+
+.script-tab-actv {
+  background-color: #119422;
+  color: #fff;
+}
+
+.script-tab:not(.script-tab-actv) {
+  cursor: pointer;
+  transition: background-color 200ms ease-in-out;
+}
+
+.script-tab:not(.script-tab-actv):hover {
+  background-color: #e8fceb;
 }
 
