@@ -43,11 +43,11 @@
 			</div>
 			<div class="form-group">
 				<label class="impt">Call Date</label>
-				<input class="form-control" data-provide="datepicker">
+				<input type="text" class="form-control date" autocomplete="off">
 			</div>
 			<div class="form-group">
 				<label class="impt">Evaluation Date</label>
-				<input class="form-control" data-provide="datepicker">
+				<input type="text" class="form-control date" autocomplete="off">
 			</div>
 			<div class="form-group">
 				<label class="impt">Vici Dispo</label>

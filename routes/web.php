@@ -36,6 +36,10 @@ Route::get('/incident-report', function(){
 	return view('incident_report_form');
 });
 
+Route::get('/search-lead', function(){
+	return view('search-lead');
+});
+
 Route::put('/user/update_account','UserController@update_account')
        ->name('user.update_account');
 Route::put('/user/update_password','UserController@update_password')

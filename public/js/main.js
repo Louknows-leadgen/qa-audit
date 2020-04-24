@@ -1,5 +1,54 @@
 $(document).ready(function(){
 
+
+	/*
+	|-------------------------------------------------------------------------
+    | initialize bootstrap-select
+    |-------------------------------------------------------------------------
+	*/
+
+		$('.select-mult').selectpicker();
+
+	/*
+	|-------------------------------------------------------------------------
+    | initialize datefield
+    |-------------------------------------------------------------------------
+	*/
+	
+
+	// callback function
+	var date = function(){
+		tail.DateTime(".date",{
+			dateFormat: 'mm/dd/YYYY',
+			timeFormat: false
+		});
+	};
+
+	var datetime = function(){
+		tail.DateTime(".datetime",{
+			dateFormat: 'mm/dd/YYYY',
+			timeFormat: "GG:ii A",
+			timeIncrement: false,
+			timeSeconds: false
+		});
+	};
+
+	// initialize date and datetime
+	date();
+	datetime();
+
+	// reinitialize dynamic elements for datetime
+	var elementToObserve = document.querySelector("body");
+	var obsrv_date = new MutationObserver(date);
+	var obsrv_datetime = new MutationObserver(datetime);
+	obsrv_date.observe(elementToObserve, {subtree: true, childList: true});
+	obsrv_datetime.observe(elementToObserve, {subtree: true, childList: true});
+
+
+
+	//-------------------------------------------------------------------------
+
+
 	/*
 	|-----------------------------------------------------------------
 	| User details update

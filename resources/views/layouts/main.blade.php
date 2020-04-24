@@ -12,7 +12,9 @@
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
     <!-- src: https://cdnjs.com/libraries/bootstrap-datepicker -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js" defer></script>    
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js" defer></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/js/bootstrap-select.min.js" defer></script>
+    <script src="{{ asset('js/tail.datetime.min.js')}}" defer></script>
     <script src="{{ asset('js/main.js') }}" defer></script>
 
     <!-- Fonts -->
@@ -22,7 +24,8 @@
 
     <!-- Styles -->
     <!-- src: https://cdnjs.com/libraries/bootstrap-datepicker -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css" rel="stylesheet">
+    <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css" rel="stylesheet"> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/css/bootstrap-select.min.css">
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
 <body>
@@ -30,7 +33,7 @@
         @include('layouts.header')
 
 
-        <main class="py-4" style="max-width: 1250px; overflow-x: auto;">
+        <main class="py-4">
             @yield('content')
         </main>
     </div>
