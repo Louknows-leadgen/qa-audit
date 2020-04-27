@@ -56,7 +56,7 @@ class LoginController extends Controller
             case 3:
                 return redirect()->route('supervisor');
             case 4:
-                return redirect()->route('auditor');  
+                return redirect()->route('audit-users');  
         }
     }
 }

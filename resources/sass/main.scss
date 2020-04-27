@@ -761,3 +761,11 @@ div[data-tabcontent].actv{
   display: inline;
   color: red;
 }
+
+.audit-header{
+  cursor: pointer;
+}
+
+.audit-body{
+  display: none;
+}

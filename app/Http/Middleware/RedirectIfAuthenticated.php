@@ -34,7 +34,7 @@ class RedirectIfAuthenticated
                     return redirect()->route('supervisor');
                     break;
                 case 4:
-                    return redirect()->route('auditor'); 
+                    return redirect()->route('audit-users'); 
                     break;  
             }
         }

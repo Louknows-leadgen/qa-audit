@@ -188,7 +188,24 @@ $(document).ready(function(){
 
 	//-----------------------------------------------------------------------------
 
-	
+
+
+	/*
+	|-----------------------------------------------------------------
+	| Auditor QA search audits
+	|-----------------------------------------------------------------
+	*/
+
+	$(document).on("click",".audit-header",function(){
+		var body = $(this).siblings(".audit-body");
+
+		body.slideToggle(200);
+	});
+
+	//----------------------------------------------------------------
+
+
+
 	/*
 	|-----------------------------------------------------------------
 	| Auditor QA form effects
@@ -207,7 +224,8 @@ $(document).ready(function(){
 		$("div[data-tabcontent="+ tab +"]").addClass("actv");
 
 		// smooth scrolling to the top
-		$("html,body").animate({ scrollTop: 0 },"slow");
+		var distance = $("div[data-container=script]").position();
+		$("html,body").animate({ scrollTop: distance.top },"slow");
 	});
 
 	$(document).on("click",".left-chevron,.right-chevron",function(){
@@ -216,7 +234,7 @@ $(document).ready(function(){
 		$(".script-tab[data-tab="+ tab +"]").click();
 	});
 
-	//-----------------------------------------------------------------------------
+	//-----------------------------------------------------------------
 
 });
 

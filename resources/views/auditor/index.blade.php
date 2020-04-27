@@ -5,6 +5,32 @@
 
 <div class="container">
 	<div class="row">
+		<div class="col-md-11 mb-3">
+			<div class="box">
+				<div class="row">
+					<div class="col-md-6">
+						<label><strong>Call ID:</strong></label>
+						<span>74943505</span>
+					</div>
+					<div class="col-md-6">
+						<label><strong>Phone number:</strong></label>
+						<span>3214396690</span>
+					</div>
+					<div class="col-md-6">
+						<label><strong>Agent ID:</strong></label>
+						<span>3286</span>
+					</div>
+					<div class="col-md-6">
+						<label><strong>Agent Name:</strong></label>
+						<span>John Doe</span>
+					</div>
+					<div class="col-md-12">
+						<label><strong>Recordings:</strong></label>
+						<span><a href="http://38.102.225.164/RECORDINGS/20200428-005631_5303125878-all.wav" target="_blank">{{ basename('http://38.102.225.164/RECORDINGS/20200428-005631_5303125878-all.wav') }}</a></span>
+					</div>
+				</div>
+			</div>
+		</div>
 		<div class="col-md-3">
 			<div class="box">
 				<h5 class=" text-center">Response scripts:</h5>
@@ -24,7 +50,7 @@
 				</ul>
 			</div>
 		</div>
-		<div class="col-md-8">
+		<div class="col-md-8" data-container="script">
 			@include('auditor.z01')
 			@include('auditor.z02')
 			@include('auditor.z03')
